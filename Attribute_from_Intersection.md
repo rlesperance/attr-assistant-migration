@@ -29,3 +29,25 @@ if (IsEmpty(intx_feature) || intx_feature == null)
 
 return intx_feature[intx_field];
 ```
+
+##  More than one layer
+
+In addition, you can query more than one layer to get the result your are looking for. 
+For instance, if you have two layers that the feature could intersect, such as a control valve on either a pressurized mainline or a gravity mainline (in this case they were in two different layers).
+
+```js
+var intx_field = "FIELD_NAME"
+var intx_features = FeatureSetByName($datastore, 'PressurizedMain', [intx_field], true)
+var intx_feature = First(Intersects(intx_features, buffer($feature, 0.02)))
+
+if (IsEmpty(intx_feature) || intx_feature == null)
+  {   
+    var intx_features = FeatureSetByName($datastore, 'GravityMain', [intx_field], true)
+    var intx_feature = First(Intersects(intx_features, buffer($feature, 0.02)))
+    if (IsEmpty(intx_feature) || intx_feature == null) {
+      return $feature.FIELD_NAME }
+    return intx_feature[intx_field];
+  }
+
+return intx_feature[intx_field];
+```
