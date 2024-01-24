@@ -9,3 +9,5 @@ The ArcGIS Desktop (ArcMap) Attribute Assistant was a powerful tool for editors 
 
 With the introduction of ArcGIS Pro, you can create rules around attributes and store them with the feature classes in an Enterprise Geodatabase.  This offers advantages in that the rule is stored with the feature class in the database, and therefore travels with the feature class even if moved.  There is no deployment necessary, so changes to the rules are applied immediately to all editing.  
 ArcGIS Server honors these rules as well, so editing in web maps will also fire the rules.
+
+Visit Esri's code repository for Arcade for more scripts you can use.  https://github.com/rlesperance/arcade-expressions
