@@ -22,3 +22,9 @@ Python Script:  Add_Alter_AttrRules_Bulk.py
 Excel:  AddributeRules_Add.xlsx
 
 More descriptive documentation on that script forthcoming.
+
+# Create Database Sequences
+
+There is a geoprocessing tool to create a database sequence you can use in a rule to generate an ID.   
+The sequence will iterate each time it is referenced.   The updloaded script CreateSequence.py will use a list of sequences in the XLS file DB_Sequence_List.xlsx to add them in bulk to the database. 
+
