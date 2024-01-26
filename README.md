@@ -11,3 +11,14 @@ With the introduction of ArcGIS Pro, you can create rules around attributes and 
 ArcGIS Server honors these rules as well, so editing in web maps will also fire the rules.
 
 Visit Esri's code repository for Arcade for more scripts you can use.  https://github.com/rlesperance/arcade-expressions
+
+
+# Deployment
+
+Included in this repository is a Python script that will deploy a series of rules in JS form to a geodatabase.  This can be used to apply to multiple geodatabases (staging and prodution). 
+The python script has some internal switches, but is driven from an XLSX file containing the rules and settings as well as the file name containing the code. 
+
+Python Script:  Add_Alter_AttrRules_Bulk.py
+Excel:  AddributeRules_Add.xlsx
+
+More descriptive documentation on that script forthcoming.
